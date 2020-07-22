@@ -18,3 +18,25 @@ mvn archetype:generate
   -DarchetypeGroupId=org.apache.maven.archetypes 
   -DarchetypeArtifactId=maven-archetype-mojo
 ```
+### Внедрение плагина в проект:
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.pva</groupId>
+            <artifactId>pva-maven-plugin</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <configuration>
+                <scope>test</scope>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>dependency-counter</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+```
