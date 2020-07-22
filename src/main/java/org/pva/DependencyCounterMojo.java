@@ -1,3 +1,5 @@
+package org.pva;
+
 import org.apache.maven.model.Dependency;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -25,11 +27,9 @@ public class DependencyCounterMojo extends AbstractMojo {
 //            long numDependencies = dependencies.stream()
 //                    .filter(d -> (scope == null || scope.isEmpty()) || scope.equals(d.getScope()))
 //                    .count();
-//            long numDependencies = dependencies.size();
             long numDependencies = dependencies.size();
             getLog().info("Number of dependencies: " + numDependencies);
         }
-
         String baseDir = project.getBasedir().getAbsolutePath();
         getLog().info("Base directory: " + baseDir);
     }

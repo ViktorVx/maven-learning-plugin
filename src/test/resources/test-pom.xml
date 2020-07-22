@@ -29,6 +29,13 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.pva</groupId>
+				<artifactId>pva-maven-plugin</artifactId>
+				<configuration>
+					<scope>test</scope>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>${maven.assembly.plugin.version}</version>
