@@ -24,13 +24,11 @@ public class DependencyCounterMojo extends AbstractMojo {
     public void execute() throws MojoExecutionException, MojoFailureException {
         List<Dependency> dependencies = project.getDependencies();
         if (dependencies != null) {
-//            long numDependencies = dependencies.stream()
-//                    .filter(d -> (scope == null || scope.isEmpty()) || scope.equals(d.getScope()))
-//                    .count();
             long numDependencies = dependencies.size();
             getLog().info("Number of dependencies: " + numDependencies);
         }
         String baseDir = project.getBasedir().getAbsolutePath();
         getLog().info("Base directory: " + baseDir);
+        getLog().info("Scope: " + scope);
     }
 }
